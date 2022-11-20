@@ -92,4 +92,3 @@ linreg(formula = Fertility ~ ., data = dat)
 
 lm(formula = Fertility ~ ., data = dat)
 summary(lm(formula = Fertility ~ ., data = dat))
-
