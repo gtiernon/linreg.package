@@ -46,6 +46,8 @@ Using the "swiss" dataset in R as demonstrated above, here's an example of the l
 
 ## Installation
 
+To install, copy and paste the following into your RStudio console. 
+
 ```{r}
 install.packages("linreg")
 ```
