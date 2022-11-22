@@ -10,9 +10,10 @@ In the field of statistics, linear regression is a way to model the relationship
 
 In order to use this function, real or simulated data is needed. The user needs to input a formula that contains the desired outcome and predictor(s) as well as the dataset that the variables come from. 
 
-## Graph of fitted line
+## Graph of Fitted Line
 
-![Scatter Plot with Fitted Regression Line](images/scatterplot.jpg)
+![Scatter Plot with Fitted Regression Line](/linreg.package/images/scatterplot.jpeg)
+<img src="/linreg.package/images/scatterplot.jpeg" alt="Alt text" title="Optional title">
 
 ## Installation
 
