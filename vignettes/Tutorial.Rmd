@@ -20,7 +20,7 @@ library(linreg.package)
 ```
 
 Demo `linreg`:
-```{r, echo=FALSE}
+```{r}
 #import test data
 data("swiss")
 dat = swiss
@@ -28,8 +28,8 @@ dat = swiss
 #plug in formula and dataset
 linreg(formula = Fertility ~ Education, data = dat)
 
-#formula that selects remaining columns as predictor variables
-linreg(formula = Fertility ~ ., data = dat)
+#compare to lm() function
+lm(formula = Fertility ~ Education, data = dat)
 ```
 
 
