@@ -1,6 +1,10 @@
   <!-- badges: start -->
   [![R-CMD-check](https://github.com/gtiernon/linreg.package/workflows/R-CMD-check/badge.svg)](https://github.com/gtiernon/linreg.package/actions)
   <!-- badges: end -->
+  
+  <!-- badges: start -->
+  [![Codecov test coverage](https://codecov.io/gh/gtiernon/linreg.package/branch/main/graph/badge.svg)](https://app.codecov.io/gh/gtiernon/linreg.package?branch=main)
+  <!-- badges: end -->
 
 # LINREG
 
