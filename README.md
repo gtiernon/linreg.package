@@ -37,3 +37,8 @@ Using the "swiss" dataset in R as demonstrated above, here's an example of the l
 ## Installation
 
 >Type install.packages("linreg") in the console. 
+
+```{r}
+library(usethis)
+use_readme_rmd()
+```
