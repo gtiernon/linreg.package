@@ -32,6 +32,10 @@ linreg(formula = Fertility ~ Education, data = dat)
 
 As mentioned above, the goal is to match the output of the already exisitng lm() function. Using the same data and model as the above example, one can see that the lm() function returns the same call and coefficients.
 
+```{r}
+lm(formula = Fertility ~ Education, data = dat)
+```
+
 <img width="696" alt="compare" src="https://user-images.githubusercontent.com/105001724/203407496-1fcbddcf-4b67-49a0-a4bd-9db57463db88.png">
 
 ## Graph of Fitted Line
