@@ -14,6 +14,23 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup, echo=FALSE}
+library(dplyr)
 library(linreg.package)
 ```
+
+Demo `linreg`:
+```{r, echo=FALSE}
+#import test data
+data("swiss")
+dat = swiss
+
+#plug in formula and dataset
+linreg(formula = Fertility ~ Education, data = dat)
+
+#formula that selects remaining columns as predictor variables
+linreg(formula = Fertility ~ ., data = dat)
+```
+
+
+
