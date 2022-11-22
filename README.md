@@ -12,7 +12,7 @@ In order to use this function, real or simulated data is needed. The user needs 
 
 ## Graph of fitted line
 
-![Scatter Plot with Fitted Regression Line](images/scatterplot.jpg)
+![Scatter Plot with Fitted Regression Line](../images/scatterplot.jpg)
 
 ## Installation
 
