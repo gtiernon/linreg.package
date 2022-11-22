@@ -16,7 +16,7 @@ In order to use this function, real or simulated data is needed. The user needs 
 
 ## Comparison to lm()
 
-As mentioned above, the goal is to match the output of the already exisitng lm() function. Using the same data and model as the above Example, one can see that the lm() function returns the same coefficients.
+As mentioned above, the goal is to match the output of the already exisitng lm() function. Using the same data and model as the above example, one can see that the lm() function returns the same coefficients.
 
 <img width="696" alt="compare" src="https://user-images.githubusercontent.com/105001724/203407496-1fcbddcf-4b67-49a0-a4bd-9db57463db88.png">
 
