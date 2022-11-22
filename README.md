@@ -12,7 +12,7 @@ In order to use this function, real or simulated data is needed. The user needs 
 
 ## Graph of fitted line
 
-!(plot.jpg)
+![Fitted Line](images/scatterplot.jpg)
 
 ## Installation
 
