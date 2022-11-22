@@ -28,9 +28,15 @@ dat = swiss
 #plug in formula and dataset
 linreg(formula = Fertility ~ Education, data = dat)
 
+#formula that selects remaining columns as predictor variables
+linreg(formula = Fertility ~ ., data = dat)
+```
+
+Comparison of `linreg to lm`:
+```{r}
+#using same example as above
+linreg(formula = Fertility ~ Education, data = dat)
+
 #compare to lm() function
 lm(formula = Fertility ~ Education, data = dat)
 ```
-
-
-
