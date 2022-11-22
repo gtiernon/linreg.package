@@ -20,6 +20,12 @@ In order to use this function, real or simulated data is needed. The user needs 
 
 ## Example
 
+```{r}
+data("swiss)
+dat = swiss
+linreg(formula = Fertility ~ Education, data = dat)
+```
+
 <img width="699" alt="demo" src="https://user-images.githubusercontent.com/105001724/203406278-62fc5eae-f091-4abc-b2bf-c986e7838375.png">
 
 ## Comparison to lm()
