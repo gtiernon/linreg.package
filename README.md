@@ -8,7 +8,7 @@ In the field of statistics, linear regression is a way to model the relationship
 
 ## Usage
 
-In order to use this function, real or simulated data is needed. The user needs to input a formula that contains the desired outcome and predictor(s) and the dataset that the variables come from. 
+In order to use this function, real or simulated data is needed. The user needs to input a formula that contains the desired outcome and predictor(s) as well as the dataset that the variables come from. 
 
 ## Installation
 
