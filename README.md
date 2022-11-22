@@ -29,3 +29,8 @@ Using the "swiss" dataset in R as demonstrated above, here's an example of the l
 ## Installation
 
 >Type install.packages("linreg") in the console. 
+
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/gtiernon/linreg.package/workflows/R-CMD-check/badge.svg)](https://github.com/gtiernon/linreg.package/actions)
+<!-- badges: end -->
