@@ -1,3 +1,4 @@
+library(testthat)
 library(linreg.package)
 
 #import data
