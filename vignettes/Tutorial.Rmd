@@ -21,22 +21,92 @@ library(linreg.package)
 
 Demo `linreg`:
 ```{r}
-#import test data
+#import test data from R
 data("swiss")
 dat = swiss
 
 #plug in formula and dataset
 linreg(formula = Fertility ~ Education, data = dat)
 
+#choose multiple predictors
+linreg(formula = Infant.Mortality ~ Agriculture + Education + Fertility, data = dat)
+
 #formula that selects remaining columns as predictor variables
-linreg(formula = Fertility ~ ., data = dat)
+linreg(formula = Catholic ~ ., data = dat)
 ```
 
 Comparison of `linreg to lm`:
 ```{r}
-#using same example as above
-linreg(formula = Fertility ~ Education, data = dat)
+#use same data set as above (dat = swiss)
+#set formulas to use for both functions
+formula = Fertility ~ .
+formula1 = Fertility ~ Education
+formula2 = Fertility ~ Education + Agriculture
+formula3 = Fertility ~ Education + Agriculture + Examination
+formula4 = Fertility ~ Education + Agriculture + Examination + Catholic
+formula5 = Fertility ~ Education + Agriculture + Examination + Catholic + Infant.Mortality
 
-#compare to lm() function
-lm(formula = Fertility ~ Education, data = dat)
+##compare linreg() to lm() function for each formula
+#formula
+linreg(formula, dat)
+lm(formula, dat)
+
+#formula1
+linreg(formula1, dat)
+lm(formula1, dat)
+
+#forumla2
+linreg(formula2, dat)
+lm(formula2, dat)
+
+#formula3
+linreg(formula3, dat)
+lm(formula3, dat)
+
+#formula4
+linreg(formula4, dat)
+lm(formula4, dat)
+
+#formula5
+linreg(formula5, dat)
+lm(formula5, dat)
 ```
+
+Demo `linreg` using different data sets and compare to lm:
+```{r}
+##Cars data set
+#import test data from R
+data("cars")
+dat1 = cars
+
+#plug in formula and data, then compare with lm()
+linreg(speed ~ dist, dat1)
+lm(speed ~ dist, dat1)
+
+##Women data set
+#import test data from R
+data("women")
+dat2 = women
+
+#plug in formula and data, then compare with lm()
+linreg(height ~ weight, dat2)
+lm(height ~ weight, dat2)
+```
+
+Plot of fitted regression lines:
+```{r}
+##for the cars data set (dat1)
+#plot a scatter plot of height vs weight
+plot(speed ~ dist, dat1)
+#add the regression line to the plot
+abline(linreg(speed ~ dist, dat1)$Coefficients)
+
+##for the women data set (dat2)
+#plot a scatter plot of height vs weight
+plot(height ~ weight, dat2)
+#add the regression line to the plot
+abline(linreg(height ~ weight, dat2)$Coefficients)
+```
+
+
+
