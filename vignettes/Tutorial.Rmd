@@ -50,26 +50,38 @@ formula5 = Fertility ~ Education + Agriculture + Examination + Catholic + Infant
 #formula
 linreg(formula, dat)
 lm(formula, dat)
+all.equal(as.vector(linreg(formula, dat)$Coefficients),
+          as.vector(lm(formula, dat)[[1]]))
 
 #formula1
 linreg(formula1, dat)
 lm(formula1, dat)
+all.equal(as.vector(linreg(formula1, dat)$Coefficients),
+          as.vector(lm(formula1, dat)[[1]]))
 
 #forumla2
 linreg(formula2, dat)
 lm(formula2, dat)
+all.equal(as.vector(linreg(formula2, dat)$Coefficients),
+          as.vector(lm(formula2, dat)[[1]]))
 
 #formula3
 linreg(formula3, dat)
 lm(formula3, dat)
+all.equal(as.vector(linreg(formula3, dat)$Coefficients),
+          as.vector(lm(formula3, dat)[[1]]))
 
 #formula4
 linreg(formula4, dat)
 lm(formula4, dat)
+all.equal(as.vector(linreg(formula4, dat)$Coefficients),
+          as.vector(lm(formula4, dat)[[1]]))
 
 #formula5
 linreg(formula5, dat)
 lm(formula5, dat)
+all.equal(as.vector(linreg(formula5, dat)$Coefficients),
+          as.vector(lm(formula5, dat)[[1]]))
 ```
 
 Demo `linreg` using different data sets and compare to lm:
@@ -82,6 +94,8 @@ dat1 = cars
 #plug in formula and data, then compare with lm()
 linreg(speed ~ dist, dat1)
 lm(speed ~ dist, dat1)
+all.equal(as.vector(linreg(speed ~ dist, dat1)$Coefficients),
+          as.vector(lm(speed ~ dist, dat1)[[1]]))
 
 ##Women data set
 #import test data from R
@@ -91,6 +105,8 @@ dat2 = women
 #plug in formula and data, then compare with lm()
 linreg(height ~ weight, dat2)
 lm(height ~ weight, dat2)
+all.equal(as.vector(linreg(height ~ weight, dat2)$Coefficients),
+          as.vector(lm(height ~ weight, dat2)[[1]]))
 ```
 
 Plot of fitted regression lines:

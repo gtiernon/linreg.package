@@ -21,12 +21,23 @@ Comparable to the lm() function.
 \url{https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/lm}
 }
 \examples{
-## import data
+## Example 1
+
+#import data
 data("swiss")
 dat = swiss
 
-## call function
+#plug in formula and data
 linreg(formula = Fertility ~ Education, data = dat)
 linreg(formula = Agriculture ~ ., data = dat)
 linreg(Fertility ~ Education + Agriculture + Examination + Catholic + Infant.Mortality, dat)
+
+## Example 2
+
+#import data
+data("cars")
+dat1 = cars
+
+#plug in formula and data
+linreg(speed ~ dist, dat1)
 }

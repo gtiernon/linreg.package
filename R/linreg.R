@@ -28,24 +28,26 @@ linreg <- function(formula, data){
                     as.character(formula[[3]][[3]]))
     }
   }
-  #predictor = as.character(predictor)
 
-  #set up matrices
+  ## set up matrices ##
+  #outcome
   out = data %>% select(all_of(outcome))
 
+  #predictor(s)
   if(formula[[3]]=="."){
     pred = data %>% select(-all_of(outcome))
   }else{ pred = data %>% select(all_of(predictor))}
 
+  #matrices
   y = matrix(out[[1]], nrow = nrow(data))
   X = cbind(1, as.matrix(pred))
   colnames(X)[1] <- "(Intercept)"
 
-  #estimated coeff
+  #matrix multiplication for estimated coefficients
   beta = solve(t(X)%*%X)%*%t(X)%*%y
 
   #final result as a list to replicate lm()
-  output = list("Call" = match.call(), "Coefficients" = t(round(beta,5)))
+  output = list("Call" = match.call(), "Coefficients" = t(round(beta,8)))
 
   return(output)
 }
