@@ -20,11 +20,21 @@ In order to use this function, real or simulated data is needed. The user needs 
 
 ## Example
 
+```{r}
+data("swiss)
+dat = swiss
+linreg(formula = Fertility ~ Education, data = dat)
+```
+
 <img width="699" alt="demo" src="https://user-images.githubusercontent.com/105001724/203406278-62fc5eae-f091-4abc-b2bf-c986e7838375.png">
 
 ## Comparison to lm()
 
 As mentioned above, the goal is to match the output of the already exisitng lm() function. Using the same data and model as the above example, one can see that the lm() function returns the same call and coefficients.
+
+```{r}
+lm(formula = Fertility ~ Education, data = dat)
+```
 
 <img width="696" alt="compare" src="https://user-images.githubusercontent.com/105001724/203407496-1fcbddcf-4b67-49a0-a4bd-9db57463db88.png">
 
@@ -36,4 +46,8 @@ Using the "swiss" dataset in R as demonstrated above, here's an example of the l
 
 ## Installation
 
->Type install.packages("linreg") in the console. 
+To install, copy and paste the following into your RStudio console. 
+
+```{r}
+install.packages("linreg")
+```
