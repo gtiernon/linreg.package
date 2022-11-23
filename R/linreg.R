@@ -2,10 +2,31 @@ library(dplyr)
 
 linreg <- function(formula, data){
 
-  #extract inputs
+  #extract outcome variable name from input
   outcome = formula[[2]]
   outcome = as.character(outcome)
-  predictor = formula[[3]]
+
+  #extract name of predictor variable(s) based on input
+  #account for multiple predictors
+  if(formula[[3]][[1]] == "+"){
+    if(length(formula[[3]]==3 & length(formula[[3]][[2]])==1)){
+      predictor = c(as.character(formula[[3]][[2]]), as.character(formula[[3]][[3]]))
+    }
+    if(length(formula[[3]]==3 & length(formula[[3]][[2]][[2]])==1)){
+      predictor = c(as.character(formula[[3]][[2]][[2]]), as.character(formula[[3]][[3]]))
+    }
+    if(length(formula[[3]]==3 & length(formula[[3]][[2]][[2]][[2]])==1)){
+      predictor = c(as.character(formula[[3]][[2]][[2]][[2]]), as.character(formula[[3]][[2]][[2:3]]),
+                    as.character(formula[[3]][[2]][[3]]), as.character(formula[[3]][[3]]))
+    }
+    if(length(formula[[3]]==3)){
+      predictor = c(as.character(formula[[3]][[2]][[2]][[2]][[2]]), as.character(formula[[3]][[2]][[2]][[2:3]]),
+                    as.character(formula[[3]][[2]][[2:3]]), as.character(formula[[3]][[2]][[3]]),
+                    as.character(formula[[3]][[3]]))
+    }
+  }else{
+    predictor = formula[[3]]
+  }
   predictor = as.character(predictor)
 
   #set up matrices
