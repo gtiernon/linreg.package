@@ -1,11 +1,3 @@
-  <!-- badges: start -->
-  [![R-CMD-check](https://github.com/gtiernon/linreg.package/workflows/R-CMD-check/badge.svg)](https://github.com/gtiernon/linreg.package/actions)
-  <!-- badges: end -->
-  
-  <!-- badges: start -->
-  [![Codecov test coverage](https://codecov.io/gh/gtiernon/linreg.package/branch/main/graph/badge.svg)](https://app.codecov.io/gh/gtiernon/linreg.package?branch=main)
-  <!-- badges: end -->
-
 # LINREG
 
 This package was created for the BIOSTAT 625 course at the University of Michigan. It contains the linreg() function which fits a linear regression model to a dataset in R. The goal is to match the output of the already existing lm() function in R. 
